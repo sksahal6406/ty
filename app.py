@@ -43,7 +43,7 @@ for col in features:
 user_df = pd.DataFrame([user_input])
 print(user_df)
 print(X_test)
-predicted_disease = pipeline.predict(user_df)[0]
+predicted_disease = pipeline.predict(user_df[0])
 print(f"\n:stethoscope: Based on your symptoms, the predicted disease is: **{predicted_disease}**")
 
 
@@ -72,3 +72,4 @@ and what you need to do if you have it.These are the symptom{ Arjun }
 text1 = model.generate_content([prompt])
 
 print(text1.text)
+
