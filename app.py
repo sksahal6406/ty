@@ -39,7 +39,7 @@ print(df)
 for col in features:
     options = df[col].dropna().unique()
     print(f"{col} options: {', '.join(map(str, options))}")
-    #user_input[col] = st.selectbox(f"Select {col}:", options=list(options))
+    user_input[col] = st.selectbox(f"Select {col}:", options=list(options))
 user_df = pd.DataFrame([user_input])
 print(user_df)
 print(X_test)
@@ -72,5 +72,6 @@ and what you need to do if you have it.These are the symptom{ Arjun }
 text1 = model.generate_content([prompt])
 
 print(text1.text)
+
 
 
